@@ -5,14 +5,15 @@
 # ....
 # e.g. 6th fibonacci number is 8
 
-# Time complexity: ?
-# Space complexity: ?
+# n is the input number
+# Time complexity: O(2n), since 2n steps will be needed.
+# Space complexity: O(n), the call stack will be at most n deep.
 def fibonacci(n)
+  p "here"
   if n.nil? || n < 0
     raise ArgumentError
   end
   if n == 0
-    # p "n = 0"
     return 0
   elsif n == 1
     # p "n = 1"
@@ -21,5 +22,3 @@ def fibonacci(n)
     return fibonacci(n - 2) + fibonacci(n - 1)
   end
 end
-
-# p fibonacci(3)
